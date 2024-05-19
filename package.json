@@ -1,0 +1,1 @@
+{"name":"kanjiquizz_server","version":"1.0.0","description":"Backend using nodejs for kanjiquizzz","main":"server.js","type":"module","engines":{"node":"18.x"},"scripts":{"test":"echo \"Error: no test specified\" && exit 1","start":"node server.js"},"author":"Joffrey","license":"ISC","dependencies":{"cors":"^2.8.5","express":"^4.17.1","mongodb":"^5.0.0"}}
