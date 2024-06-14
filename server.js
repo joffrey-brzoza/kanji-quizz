@@ -29,13 +29,12 @@ async function searchKanji(search, live) {
     const database = client.db("kanjiquizzdb");
     const questions = database.collection("questions");
     const cursor = questions.find(
-        { serie: live ? 1 : 0}, 
-                {$or: [
+        { $or: [
                     {kanji: {$regex: new RegExp(search, "i")}},
                     {hiragana: {$regex: new RegExp(search, "i")}},
                     {definition: {$regex: new RegExp(search, "i")}}
-                ]}
-        )
+                ]
+        })
     await cursor.forEach(item => {
         output.push(item);
     });
